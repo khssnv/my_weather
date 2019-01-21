@@ -5,7 +5,7 @@
 
 mkRosPackage rec {
   name = "${pname}-${version}";
-  pname = "fuji_weather";
+  pname = "my_weather_acl";
   version = "master";
 
   src = ./.;
@@ -13,9 +13,9 @@ mkRosPackage rec {
   propagatedBuildInputs = [ robonomics_comm ];
 
   meta = with stdenv.lib; {
-    description = "Robonomics winter school fuji lesson";
-    homepage = http://github.com/airalab/robonomics-winter-school-2018;
+    description = "";
+    homepage = http://github.com/khssnv/my_weather;
     license = licenses.bsd3;
-    maintainers = with maintainers; [ akru ];
+    maintainers = [  ];
   };
 }

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(fuji_weather_acl)
+project(my_weather_acl)
 
 find_package(catkin REQUIRED COMPONENTS
   rospy
