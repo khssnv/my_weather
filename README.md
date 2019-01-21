@@ -1,9 +1,30 @@
-Winter School 2018 
+My home sensor app
 ==================
-
-Fuji weather
-------------
-
-Edit [api_key](https://github.com/airalab/robonomics-winter-school-2018/blob/master/fuji_weather/scripts/worker_node#L172).
+Packages for AIRA to connect my home air quality sensor and access its data through Robonomics by web DApp
 
 
+Packages
+--------
+
+### my_weather_acl
+Sensor to Robonomics connector package for AIRA
+
+### my_weather_dapp
+Web UI to see data
+
+### my_weather_sketch
+Firmware for sensor node
+
+
+Hardware
+--------
+
+### Main board
+LOLIN(Wemos) R1 D1 & mini compatable board with Wi-Fi esp8266 module and 18650 battery
+
+### Particles sensor
+Plantower PMS7003
+[Particles PM2.5: what is it, where is it from and why everyone talk about it](https://airkaz.org/pm25.php) (russian)
+
+### Temperature and humidity sensor
+SparkFun HTU21D module
