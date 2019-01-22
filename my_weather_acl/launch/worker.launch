@@ -5,7 +5,7 @@
     <param name="model" value="QmZzoCxdcGrtNAjojoYARMrjZjToAEqm1udiVD9hmzmEE2" />
 
     <!-- A contract address of ACL storage -->
-    <param name="acl_address" value="0x59869c9b7297E67E0bD7be62e1561f9c292Ec5cD" />
+    <param name="acl_address" value="0xD9DB9aa673CE5fA4733FaE45E641C21465aCdb32" />
 
     <!-- Sensor IP address -->
     <param name="sensor_ip" value="192.168.20.145" />
