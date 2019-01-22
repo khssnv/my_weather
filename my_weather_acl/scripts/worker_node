@@ -50,7 +50,7 @@ class WorkerNode:
           Any new demand will be handled by CPS
         '''
         ## TODO: uncomment if you want to provide service free.
-        #rospy.Subscriber('/liability/infochan/incoming/demand', Demand, self.on_new_demand)
+        rospy.Subscriber('/liability/infochan/incoming/demand', Demand, self.on_new_demand)
         
         '''
           Simple result message publisher.
