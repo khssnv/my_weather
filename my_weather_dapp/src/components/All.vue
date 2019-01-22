@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-xs-center">Fuji weather</h1>
+    <h1 class="text-xs-center">My weather</h1>
     <v-container v-if="!robonomicsStatus" fluid fill-height class="px-3">
       <v-layout
         justify-center
