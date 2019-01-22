@@ -1,8 +1,14 @@
 <launch>
   <node name="worker" pkg="my_weather_acl" type="worker_node" output="screen">
+
     <!-- A unique model Qm.... -->
-    <param name="model" value="Qmd6bn2JGW26hSx7g5gVCmfgB7uigRPrhAukJn77ee3bMM" />
+    <param name="model" value="QmZzoCxdcGrtNAjojoYARMrjZjToAEqm1udiVD9hmzmEE2" />
+
     <!-- A contract address of ACL storage -->
     <param name="acl_address" value="0x59869c9b7297E67E0bD7be62e1561f9c292Ec5cD" />
+
+    <!-- Sensor IP address -->
+    <param name="sensor_ip" value="192.168.20.145" />
+
   </node>
 </launch>

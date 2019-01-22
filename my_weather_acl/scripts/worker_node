@@ -174,12 +174,15 @@ class WorkerNode:
 
     def do_work(self):
         ## PLACE YOUR WORKER CODE HERE
-        # Get weather around mt. Fuji
-        api_key = 'e4119cc38e611fcda8d9a03afde0eec4'
-        c = HTTPConnection('api.openweathermap.org')
-        c.request('GET', '/data/2.5/weather?q=Fuji,jp&appid='+api_key)
+        # Get weather from my home sensor
+        c = HTTPConnection(rospy.get_param('~sensor_ip'))
+        c.request('GET', '/string')
         res = c.getresponse()
-        return String(data=res.read().decode('utf-8'))
+        if res.status == 200:
+            msg = String(data=res.read().decode('utf-8'))
+        else:
+            msg = String(data="Sensor fails.")
+        return msg
 
     def spin(self):
         Thread(target=self._process_liability_queue, daemon=True).start()
