@@ -19,6 +19,8 @@ Firmware for sensor node
 Hardware
 --------
 
+<img src="https://github.com/khssnv/my_weather/raw/master/sensor.jpg" height="400">
+
 ### Main board
 LOLIN(Wemos) R1 D1 & mini compatable board with Wi-Fi esp8266 module and 18650 battery
 
