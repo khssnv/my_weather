@@ -27,7 +27,7 @@ export const watchTx = (tx) => {
 
 export const getModel = () => {
   const username = new URL(location.href)
-  const url = 'https://raw.githubusercontent.com/' + username.hostname.split('.')[0] + '/' + username.pathname.replace(new RegExp('/', 'g'), '') + '/master/fuji_weather_dapp/model.txt'
+  const url = 'https://raw.githubusercontent.com/' + username.hostname.split('.')[0] + '/' + username.pathname.replace(new RegExp('/', 'g'), '') + '/master/my_weather_dapp/model.txt'
   return axios.get(url)
     .then(r => r.data.trim())
     .catch(() => {
@@ -37,7 +37,7 @@ export const getModel = () => {
 
 export const getAgents = () => {
   const username = new URL(location.href)
-  const url = 'https://raw.githubusercontent.com/' + username.hostname.split('.')[0] + '/' + username.pathname.replace(new RegExp('/', 'g'), '') + '/master/fuji_weather_dapp/agents.txt'
+  const url = 'https://raw.githubusercontent.com/' + username.hostname.split('.')[0] + '/' + username.pathname.replace(new RegExp('/', 'g'), '') + '/master/my_weather_dapp/agents.txt'
   return axios.get(url)
     .then(r => {
       const data = r.data.trim()
@@ -49,7 +49,7 @@ export const getAgents = () => {
         }
       })
       return {
-        url: 'https://github.com/' + username.hostname.split('.')[0] + '/' + username.pathname.replace(new RegExp('/', 'g'), '') + '/blob/master/fuji_weather_dapp/agents.txt',
+        url: 'https://github.com/' + username.hostname.split('.')[0] + '/' + username.pathname.replace(new RegExp('/', 'g'), '') + '/blob/master/my_weather_dapp/agents.txt',
         list
       }
     })
