@@ -164,7 +164,7 @@ export default {
                 ipfsCat(msg.result)
                   .then((r) => {
                     rosBag(new Blob([r]), (bag) => {
-                      const json = JSON.parse(bag.message.data)
+                      const json = bag.message.data
                       this.frees[k].result.push({
                         json,
                         str: JSON.stringify(json, undefined, 2)
