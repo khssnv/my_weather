@@ -65,12 +65,7 @@
                 <v-progress-linear v-if="res.result.length === 0" :indeterminate="true"></v-progress-linear>
                 <div v-else>
                   <div v-for="(item, i) in res.result" :key="i">
-                    <div style="border: 1px solid #cccaca;margin: 10px 0;width: 200px;padding: 10px;text-align:center">
-                      <img width="64" height="64" :src="`//openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/${item.json.weather[0].icon}.png`">
-                      <v-divider />
-                      <div style="padding-top: 15px;"><b>{{ parseInt(item.json.main.temp) - 273 }}<span>°C</span></b></div>
-                    </div>
-                    <code style="width:100%"><pre>{{ item.str }}</pre></code>
+                    <p>{{ item }}</p>
                   </div>
                 </div>
                 <v-divider class="my-3" />
@@ -164,11 +159,7 @@ export default {
                 ipfsCat(msg.result)
                   .then((r) => {
                     rosBag(new Blob([r]), (bag) => {
-                      const json = bag.message.data
-                      this.frees[k].result.push({
-                        json,
-                        str: JSON.stringify(json, undefined, 2)
-                      })
+                      this.frees[k].result.push(bag.message.data)
                     }, { topics: ['/data'] })
                   })
               }
